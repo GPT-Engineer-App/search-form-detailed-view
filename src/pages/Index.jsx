@@ -7,12 +7,17 @@ const Index = () => {
   const [selectedResult, setSelectedResult] = useState(null);
 
   const handleSearch = () => {
+    console.log("Search button clicked");
+    console.log("Search text:", searchText);
+
     // Mock search results based on the searchText
     const results = [
       { id: 1, title: "Result 1", description: "Description for result 1" },
       { id: 2, title: "Result 2", description: "Description for result 2" },
       { id: 3, title: "Result 3", description: "Description for result 3" },
     ].filter(result => result.title.toLowerCase().includes(searchText.toLowerCase()));
+
+    console.log("Search results:", results);
 
     setSearchResults(results);
     setSelectedResult(null);
