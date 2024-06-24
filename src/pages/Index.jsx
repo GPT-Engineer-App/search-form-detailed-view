@@ -17,13 +17,16 @@ const Index = () => {
       { id: 3, title: "Result 3", description: "Description for result 3" },
     ].filter(result => result.title.toLowerCase().includes(searchText.toLowerCase()));
 
-    console.log("Search results:", results);
+    console.log("Filtered search results:", results);
 
     setSearchResults(results);
+    console.log("Updated searchResults state:", results);
     setSelectedResult(null);
+    console.log("Reset selectedResult state to null");
   };
 
   const handleResultClick = (result) => {
+    console.log("Result clicked:", result);
     setSelectedResult(result);
   };
 
